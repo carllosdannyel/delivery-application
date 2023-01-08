@@ -7,8 +7,8 @@ export async function changeOrderStatus(req: Request, res: Response) {
     const { orderId } = req.params;
     const { status } = req.body;
 
-    if(!['AWAITING', 'IN_PRODUCTION', 'DONE'].includes(status)) {
-      return res.status(400).json({ erro: 'Status should be one of these: AWAITING, IN_PRODUCTION and DONE' });
+    if(!['WAITING', 'IN_PRODUCTION', 'DONE'].includes(status)) {
+      return res.status(400).json({ erro: 'Status should be one of these: WAITING, IN_PRODUCTION and DONE' });
     }
 
     await Order.findByIdAndUpdate(orderId, { status });
