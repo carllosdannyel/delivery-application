@@ -22,6 +22,15 @@ export const MenuContainer = styled.View`
 export const Footer = styled.View`
   min-height: 110px;
   background: #fff;
+  padding: 16px 24px;
 `;
 
-export const FooterContainer = styled.SafeAreaView``;
+export const FooterContainer = styled.SafeAreaView`
+
+`;
+
+export const CenteredContainer = styled.View`
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+`;

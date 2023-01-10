@@ -3,6 +3,8 @@ import { StatusBar } from 'expo-status-bar';
 
 import { Main } from './src/Main';
 
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
 
 export default function App() {
   const [isFontsLoaded] = useFonts({
