@@ -12,6 +12,7 @@ import { createOrder } from './app/useCases/orders/createOrder';
 import { changeOrderStatus } from './app/useCases/orders/changeOrderStatus';
 import { cancelOrder } from './app/useCases/orders/cancelOrder';
 import { deleteCategory } from './app/useCases/categories/deleteCategory';
+import { changeNameCategory } from './app/useCases/categories/changeNameCategory';
 
 export const router = Router();
 
@@ -32,7 +33,10 @@ router.get('/categories', listCategories);
 // Create category
 router.post('/categories', createCategory);
 
-// Create category
+// Change category name
+router.patch('/categories/:categoryId', changeNameCategory);
+
+// Delete category
 router.delete('/categories/:categoryId', deleteCategory);
 
 // List products
